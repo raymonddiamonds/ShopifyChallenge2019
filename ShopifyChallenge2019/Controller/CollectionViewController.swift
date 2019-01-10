@@ -19,6 +19,8 @@ class CollectionViewController: UICollectionViewController {
     var productsURL = ""
     var collectionID = ""
     
+    var collectionName: String?
+    
     @IBOutlet var detailsCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,8 @@ class CollectionViewController: UICollectionViewController {
         
         detailsCollectionView.dataSource = self
         detailsCollectionView.delegate = self
+        
+        navigationItem.title = collectionName
 
 
         // Register cell classes
@@ -70,7 +74,7 @@ class CollectionViewController: UICollectionViewController {
         
         cell.productLabel.text = title
         cell.priceLabel.text = "$\(price)"
-        cell.countLabel.text = String(count)
+        cell.countLabel.text = "\(String(count)) left"
         
         let url = URL(string: imageURL)
         cell.image.kf.setImage(with: url)

@@ -61,6 +61,7 @@ class CustomCollectionsTableViewController: UITableViewController {
                 let id = collections[indexPath.row].id
                 currentCollectionID = String(id)
                 destinationVC.collectionID = currentCollectionID
+                destinationVC.collectionName = collections[indexPath.row].name
 
             }
         }
