@@ -74,7 +74,7 @@ class CollectionViewController: UICollectionViewController {
         
         cell.productLabel.text = title
         cell.priceLabel.text = "$\(price)"
-        cell.countLabel.text = "\(String(count)) left"
+        cell.countLabel.text = "\(String(count)) left in stock"
         
         let url = URL(string: imageURL)
         cell.image.kf.setImage(with: url)
