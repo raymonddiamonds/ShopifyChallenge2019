@@ -4,9 +4,6 @@
 
 <img src="collection.png" width="250">  <img src="products.png" width="250">
 
-
-<img src="https://raw.githubusercontent.com/raymonddiamonds/ShopifyChallenge2019/blob/master/products.png" width="250">
-
 ## Technical Aspects
 
 My approach to solving this challenge was to recognize individual technical aspects. Firstly, I came up with the architecture (MVC) and designed the different classes that I would need. Afterwards, I used Postman to help make the different API calls to understand how the data is retrieved from the APIs. Once I understood how the data is shared, I modelled the different data I would need to share between controller and display to the users. A ```ShopifyService.swift``` file was created for client requests to Shopify's backend API. 
