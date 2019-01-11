@@ -1,10 +1,10 @@
 # Shopify iOS Intern Challenge - Summer 2019
 
-One Paragraph of project description goes here
+
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
@@ -17,7 +17,9 @@ pod install
 
 ## Technical Aspects
 
-The following describes the technical aspects of the project of how it was designed and built with various concepts in mind. 
+My approach to solving this challenge was to recognize individual technical aspects. Firstly, I came up with the architecture (MVC) and designed the different classes that I would need. Afterwards, I used Postman to help make the different API calls to understand how the data is retrieved from the APIs. Once I understood how the data is shared, I modelled the different data I would need to share between controller and display to the users. A ```ShopifyService.swift``` file was created for client requests to Shopify's backend API. 
+
+Breaking down each technical aspect helped in giving me a step by step process to follow when I built the app. I first created a ```UITableView```  to display the custom collection since only the collection name is needed. Once the correct information is displayed in the table view controller, I decided to use the ```UICollectionView``` to display the individual products from a collection. I made this decision so that a product image can be displayed and that there's efficient use of space to display product information. 
 
 ### Design
 
