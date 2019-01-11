@@ -19,21 +19,21 @@ pod install
 
 The following describes the technical aspects of the project of how it was designed and built with various concepts in mind. 
 
-## Design
+### Design
 
 The project was built using MVC architecture. 
 
 **Models:** 
-*Collection
-  *collectionID
-  *collectionName
+* Collection
+  * collectionID
+  * collectionName
   
-*Product
-  *id
-  *name
-  *price
-  *count
-  *imageURL
+* Product
+  * id
+  * name
+  * price
+  * count
+  * imageURL
 
 ## Built With
 
