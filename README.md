@@ -23,7 +23,7 @@ The following describes the technical aspects of the project of how it was desig
 
 The project was built using MVC architecture. 
 
-**Models:** 
+**Model:** 
 * Collection
   * collectionID
   * collectionName
@@ -34,6 +34,12 @@ The project was built using MVC architecture.
   * price
   * count
   * imageURL
+  
+**View:**
+The view contains the UI components that are visible to the user. This includes the ```UILabel``` and ```UIImageView```. There are two classes, ```CustomCollectionTableViewCell.swift``` (Collection list) and ```DetailCollectionCell.swift``` (Products) that represent the view. 
+
+**Controller:**
+The controller is the code that takes the user's action and updates the model and then updates the view. There are two controllers, ```CustomCollectionsTableViewController.swift``` (Collection list) and ```CollectionViewController.swift``` (Product Detail List). 
 
 ## Built With
 
