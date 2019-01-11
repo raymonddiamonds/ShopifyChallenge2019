@@ -2,7 +2,9 @@
 
 **Objective:** This app was created to help manage the different collection of products for my Shopify store. Requirements can be found [here](https://docs.google.com/document/d/1h3TFW9HhFxBVrmgd33dNrUiJx31NQFn6dpZHrbrSP-U/edit#). 
 
-<img src="https://raw.githubusercontent.com/raymonddiamonds/ShopifyChallenge2019/blob/master/collection.png" width="250">
+![](collection.png)
+1[](products.png)
+
 <img src="https://raw.githubusercontent.com/raymonddiamonds/ShopifyChallenge2019/blob/master/products.png" width="250">
 
 ## Technical Aspects
