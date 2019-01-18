@@ -5,6 +5,7 @@
 //  Created by Raymond Diamonds on 2019-01-09.
 //  Copyright © 2019 Raymond Diamonds. All rights reserved.
 //
+//  Purpose - to provide model for collection
 
 import Foundation
 

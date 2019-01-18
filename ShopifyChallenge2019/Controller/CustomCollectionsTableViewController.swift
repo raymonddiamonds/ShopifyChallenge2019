@@ -5,6 +5,7 @@
 //  Created by Raymond Diamonds on 2019-01-09.
 //  Copyright © 2019 Raymond Diamonds. All rights reserved.
 //
+//  Purpose - Main view controller to handle UI changes and API request
 
 import UIKit
 
@@ -36,7 +37,6 @@ class CustomCollectionsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return self.collections.count
     }
 
@@ -44,12 +44,11 @@ class CustomCollectionsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "collectionTableViewCell", for: indexPath) as! CustomCollectionTableViewCell
-        
+
         let temp = self.collections[indexPath.row].name
         
         cell.collectionTitle.text = temp
         
-
         return cell
     }
     
@@ -62,7 +61,6 @@ class CustomCollectionsTableViewController: UITableViewController {
                 currentCollectionID = String(id)
                 destinationVC.collectionID = currentCollectionID
                 destinationVC.collectionName = collections[indexPath.row].name
-
             }
         }
     }

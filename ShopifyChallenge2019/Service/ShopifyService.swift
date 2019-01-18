@@ -5,6 +5,7 @@
 //  Created by Raymond Diamonds on 2019-01-09.
 //  Copyright © 2019 Raymond Diamonds. All rights reserved.
 //
+//  Purpose - Send request using Alamofire to Shopify's API to return and SwiftyJSON to parse
 
 import Foundation
 import Alamofire
@@ -12,6 +13,14 @@ import SwiftyJSON
 
 class ShopifyService {
     
+    /*
+     *   Purpose - return an array of collection
+     *
+     *   Input:
+     *     url - URL to send request off to
+     *   Output:
+     *     returns a collection array of unique collections
+     */
     static func getCollections(url: String, completionHandler: @escaping ([Collection])-> Void) {
         
         guard let url = URL(string: url) else { return }
@@ -26,7 +35,6 @@ class ShopifyService {
                 //optional binding to check response value
                 if let value = response.result.value {
                     let json = JSON(value)
-                    
                     
                     if let collections = json["custom_collections"].array {
                         for collection in collections {
@@ -50,6 +58,14 @@ class ShopifyService {
         }
     }
     
+    /*
+     *   Purpose - find product ids associated with a collection (mid step to finding specific product details)
+     *
+     *   Input:
+     *     url - URL to send request off to
+     *   Output:
+     *     returns an int array of unique product ids
+     */
     static func getProductIds(url: String, completionHandler: @escaping ([Int])-> Void) {
         
         guard let url = URL(string: url) else { return }
@@ -69,7 +85,6 @@ class ShopifyService {
                         for products in collections {
                             
                             let id = products["product_id"].int
-                            
                             productIDs.append(id!)
                         }
                     }
@@ -81,10 +96,16 @@ class ShopifyService {
             
             completionHandler(productIDs)
         }
-        
-        
     }
     
+    /*
+     *   Purpose - return an array of Product
+     *
+     *   Input:
+     *     url - URL to send request off to with product ids
+     *   Output:
+     *     returns an array of Products associated with a collection
+     */
     static func getProducts(url: String, completionHandler: @escaping ([Product])-> Void) {
         
         guard let url = URL(string: url) else { return }
@@ -124,9 +145,6 @@ class ShopifyService {
             completionHandler(allProducts)
         }
     }
-    
-    
-    
 }
 
 
