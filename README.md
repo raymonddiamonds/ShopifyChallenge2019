@@ -1,27 +1,15 @@
 # Shopify iOS Intern Challenge - Summer 2019
 
-
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-
-### Prerequisites
-
-After cloning/downloading the project, go into the terminal and ```cd``` to the root of the project. 
-
-Download the cocoapod dependencies
-```
-pod install
-```
-
-## Technical Aspects
-
-My approach to solving this challenge was to recognize individual technical aspects. Firstly, I came up with the architecture (MVC) and designed the different classes that I would need. Afterwards, I used Postman to help make the different API calls to understand how the data is retrieved from the APIs. Once I understood how the data is shared, I modelled the different data I would need to share between controller and display to the users. A ```ShopifyService.swift``` file was created for client requests to Shopify's backend API. 
+My approach to solving this [challenge](https://docs.google.com/document/d/1h3TFW9HhFxBVrmgd33dNrUiJx31NQFn6dpZHrbrSP-U/edit#) was to recognize individual technical aspects. Firstly, I came up with the architecture (MVC) and designed the different classes that I would need. Afterwards, I used Postman to help make the different API calls to understand how the data is retrieved from the APIs. Once I understood how the data is shared, I modelled the different data I would need to share between controller and display to the users. A ```ShopifyService.swift``` file was created for client requests to Shopify's backend API. 
 
 Breaking down each technical aspect helped in giving me a step by step process to follow when I built the app. I first created a ```UITableView```  to display the custom collection since only the collection name is needed. Once the correct information is displayed in the table view controller, I decided to use the ```UICollectionView``` to display the individual products from a collection. I made this decision so that a product image can be displayed and that there's efficient use of space to display product information. 
 
-### Design
+<img src="collection.png" width="250">  <img src="products.png" width="250">
+
+
+### Technical Aspects
+
+## Design
 
 The project was built using MVC architecture. 
 
@@ -50,20 +38,26 @@ The controller is the code that takes the user's action and updates the model an
 * [SwiftyJSON](https://maven.apache.org/) - JSON parsing library for Swift
 * [Kingfisher](https://github.com/onevcat/Kingfisher) - Swift Library used to download/cache images from the web
 
-## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+## Getting Started
 
-## Versioning
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+### Prerequisites
+
+After cloning/downloading the project, go into the terminal and ```cd``` to the root of the project. 
+
+Download the cocoapod dependencies
+```
+pod install
+``` 
 
 ## Authors
 
-* **Raymond Diamonds** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Raymond Diamonds** 
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
+
